@@ -34,7 +34,7 @@ function App() {
     method: 'GET',
     redirect: 'follow'
   };
-  const pass = ""
+  const pass = "" //key for open AI API
 
   function resultGenerator() {
     setModalIsOpen(true);
@@ -53,9 +53,9 @@ function App() {
     });
   };
   
-
+//button on click function
   const handleSubmit = (event) => {
-    openNotification();
+    openNotification(); //show notification to user
     event.preventDefault();
     console.log(Input)
     const myHeaders = new Headers();
@@ -63,6 +63,7 @@ function App() {
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `Bearer ${pass}`);
 
+    //open AI API implementation
     const raw = JSON.stringify({
       "model": "gpt-3.5-turbo",
       "messages": [
@@ -101,7 +102,7 @@ function App() {
       body: raw,
       redirect: 'follow'
     };
-
+//getting and parsing data from open AI api
     fetch("https://api.openai.com/v1/chat/completions", requestOptions)
     .then(response => response.json())
     .then(result => {
@@ -109,11 +110,11 @@ function App() {
       console.log(result.choices[0].message.content)
       let temp = result.choices[0].message.content
       console.log(temp)
-      let arraytemp = temp.split(',')
+      let arraytemp = temp.split(',') 
       let arraytemptripplan = temp.split(':')
       console.log(arraytemptripplan)
       console.log(arraytemp)
-      setcity(arraytemp[0])
+      setcity(arraytemp[0]) //Output is in this format: City, Country.... allowing temp.split
       setcountry(arraytemp[1])
       console.log(city)
       console.log(country)
@@ -124,7 +125,7 @@ function App() {
       setrest2(arraytemp[6])
       setrest3(arraytemp[7])
 
-      settripplan(arraytemptripplan[1])
+      settripplan(arraytemptripplan[1]) 
       
       console.log(tripplan)
     
@@ -140,11 +141,11 @@ function App() {
 
   }
 
-  useEffect(() => {
+  useEffect(() => { //When city state and country states are updated run this function
     if (city && country) {
      
 
-
+//unsplash image api implementation
       var requestOptions1 = {
         method: 'GET',
         redirect: 'follow'
@@ -167,8 +168,10 @@ function App() {
     }
 
     var myHeaders = new Headers();
-myHeaders.append("X-Api-Key", "");
+myHeaders.append("X-Api-Key", ""); //api key
 
+    
+    //geocoding api implementation
 var requestOptions = {
   method: 'GET',
   headers: myHeaders,
@@ -188,7 +191,8 @@ fetch(`https://api.api-ninjas.com/v1/geocoding?city=${city}&country=${country}`,
   )
   .catch(error => console.log('error', error));
   }, [city, country]);
-  
+
+  //for leaflet api - loading scripts on page load
   useEffect(() => {
     const script = document.createElement('script');
 
