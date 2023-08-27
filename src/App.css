@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+:root {
+	font-size: 10px;
+	--heading-height: 30em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	background-color: #101010;
+}
+.new {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #242429 30%, #1c1c1c2c 74%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  position: absolute;
+  width: 100%;
+  height: var(--heading-height);
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.scroll-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; 
+}
+
+
+header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 6em;
+	width: 100%;
+	height: calc(var(--heading-height) + 10em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	background:
+		linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid #fff;
+}
+
+h1 {
+	font-size: calc(2.8em + 2.6vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 5rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+	font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+main {
+	padding: calc(var(--heading-height) + 1.5vw) 4em 0;
+}
+
+.pad{
+  padding-top: 55px;
+}
+
+h2 {
+	padding-top: 20px;
+	color: white;
+	font-size: 25px;
+	text-align: left;
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.8;
+	margin-bottom: 1.5em;
+	color: #333333;
+	font-family: "Open Sans", sans-serif;
+}
+
+.input {
+  border: none;
+  border-radius: 15px;
+  padding: 15px 20px;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+}
+
+.input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+  border-color: #ffffff;
+}
+
+.mapContainer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.submit {
+  margin-left: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.submit:hover {
+  background-color: #16a085;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit:focus {
+  outline: none;
+}
+
+.description {
+	background-color: rgba(220, 220, 220, 0.895);
+	color: #ffffff;
+	text-align: center;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(110, 110, 110, 0.3);
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	line-height: 1.8;
+	transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.description:hover {
+	background-color: rgb(236, 236, 236);
+	box-shadow: 0 12px 20px rgba(202, 202, 202, 0.4);
+	transform: translateY(-6px);
+}
+
+.description::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 4px;
+	background-color: #ffffff;
+	margin: 20px auto;
+	border-radius: 2px;
+	transition: width 0.3s;
+}
+
+.description:hover::after {
+	width: 80px;
+}
+
+
+.modal-header {
+  padding: 0px 25px 1px;
+  background-color: darkgray;
   color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0px 0px;
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
+  ;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-body {
+  padding: 20px;
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
 }
 
-@keyframes App-logo-spin {
+.modal-footer {
+  padding: 20px;
+  background-color: darkgray;
+  color: white;
+  text-align: right;
+  font-size: large;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #e3e3e3;
+  margin: auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
