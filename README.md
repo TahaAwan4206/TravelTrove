@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Ignition Hacks 2023 Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ishan, Aayush, Sarthak, Franklin 
+## What Inspired Us
 
-## Available Scripts
+We've all experienced the frustration of having the ideal food, restaurant, clothes, movie, or vacation spot on our minds, but struggling to define it. With our app, even a simple or detailed description can trigger AI-generated suggestions. This app addresses the difficulties in finding hotels and restaurants while also integrating a budget component to make dream vacations accessible to everyone.
 
-In the project directory, you can run:
+## What We Learned
 
-### `npm start`
+- **API Integration**: We mastered using various APIs, parsing JSON outputs into usable formats.
+- **Backend-Frontend Connection**: We gained skills in connecting a backend API to a React frontend design.
+Tech used: Open AI Key (For the hotels, restaurants, and locations api output) and React for the front-end, Unsplash API for Images, Leaflet React API for maps, API Ninjas Geocoding API
+## Challenges
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Data Parsing**: Parsing API outputs into user-friendly strings was challenging. It took quite  a bit of research and testing in order to get something to work!
+- **Multi-API Interaction**: We overcame the hurdle of using two APIs consecutively, displaying potential results and passing relevant data to another API for image retrieval. Multiple API calls had multiple errors at first but through collaboration, we were able to identify a solution.
+- Figuring out the timing and synchronization of these API calls to ensure a smooth user experience was a significant challenge.
+-Using a maps api in react was also a major challenge 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Proud Moments
+- Completing the project swiftly in such a short time frame
+- Collaborating as a diverse team who never with each other before and staying organized working on different components at the same time
+- Creating project deadlines and milestones and celebrating when we accomplished them
 
-### `npm test`
+## Next Steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Enhance by creating a user-friendly frontend.
+- Expand API functionality: Provide direct hotel links, incorporate travel dates, restaurant availability, and even flight options.
+- Introduce a starting location, potentially offering flight suggestions if air travel is chosen.
+- Implement user accounts to save favorite destinations and share plans.
+-  Explore integration with map services to visualize suggested locations
+-Implement Google Maps API for ease of use
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
