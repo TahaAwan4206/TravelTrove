@@ -16,7 +16,7 @@ function App() {
   const [Input, setInput] = useState("");
   const myHeaders = new Headers();
 
-  let [city, setcity] = useState("Will be shown");
+  let [city, setcity] = useState("Will be shown"); //Initial state set to a message so that notification looks appropriate
   let [country, setcountry] = useState("here");
   let [hotel1, sethotel1] = useState("");
   let [hotel2, sethotel2] = useState("");
