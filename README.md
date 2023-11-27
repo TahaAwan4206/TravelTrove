@@ -5,6 +5,7 @@ Ishan, Aayush, Sarthak, Franklin
 
 We've all experienced the frustration of having the ideal food, restaurant, clothes, movie, or vacation spot on our minds, but struggling to define it. With our app, even a simple or detailed description can trigger AI-generated suggestions. This app addresses the difficulties in finding hotels and restaurants while also integrating a budget component to make dream vacations accessible to everyone.
 
+
 ## What We Learned
 
 - **API Integration**: We mastered using various APIs, parsing JSON outputs into usable formats.
